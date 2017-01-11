@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Lei's Blog">
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=2.1.0" />
+
+
+
+<link rel="canonical" href="http://leix.me/"/>
+
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Lei's Blog">
+<meta property="og:url" content="http://leix.me/index.html">
+<meta property="og:site_name" content="Lei's Blog">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Lei's Blog">
+
+
+<link rel="stylesheet" type="text/css" href="/css/style.css?v=2.1.0" />
+
+
+
+  <link rel="stylesheet" type="text/css" href="/lib/fancybox/jquery.fancybox.css" />
+
+
+
+
+  
+
+
+
+    <title> Lei's Blog </title>
+  </head>
+
+  <body>
+    <div class="container">
+      <header id="header" class="header"><div class="logo-wrapper">
+  <a href="/." class="logo">Lei's Blog</a>
+</div>
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/">
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/archives/">
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item">
+          <a class="menu-item-link" href="/about">
+            About
+          </a>
+        </li>
+      
+      
+    </ul>
+  
+</nav>
+
+<div class="mobile-navbar">
+  <div class="mobile-header">
+    <div class="mobile-header-logo">
+      <a href="/." class="logo">Lei's Blog</a>
+    </div>
+
+    <div class="mobile-header-icon">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <nav class="mobile-menu">
+    
+      
+      <a class="mobile-menu-item" href="/">
+        Home
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/archives/">
+        Archives
+      </a>
+    
+      
+      <a class="mobile-menu-item" href="/about">
+        About
+      </a>
+    
+  </nav>
+</div>
+      </header>
+
+      <main id="main" class="main">
+        <div class="content-wrapper">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts">
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2017/01/09/tensorflow-practical-guides/">tensorflow practical guides</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Jan 9, 2017
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        
+          
+        
+
+        
+          <h1 id="引言"><a href="#引言" class="headerlink" title="引言"></a>引言</h1><p>作为一款流行的开源深度学习框架，TensorFlow正被越来越多的人使用。然而，TensorFlow相比于其他框架来说，相对底层，有时候仅仅为了实现一些小想法也需要编写很多代码，又因为TensorFlow庞大的体系架构，如果不能理清之间的关系，很容易导致模型稍复杂，就需要经历冗繁的调试过程。鉴于此，写下这篇博客，用于记录学习TensorFlow的过程中所踩过的坑。之后遇到的问题也都记录于此。</p>
+          <div class="read-more">
+            <a href="/2017/01/09/tensorflow-practical-guides/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/11/28/tensorflow-lyrics-generation/">Tensorflow lyrics generation</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Nov 28, 2016
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        
+          
+        
+
+        
+          <h2 id="用TensorFlow生成周杰伦歌词"><a href="#用TensorFlow生成周杰伦歌词" class="headerlink" title="用TensorFlow生成周杰伦歌词"></a>用TensorFlow生成周杰伦歌词</h2><p>最近深度学习在机器视觉CV、自然语言处理NLP领域表现出强大的潜力，各种深度学习/机器学习框架也层出不穷。tensorflow是google于去年（2015.11）开源的深度学习框架，截止目前（2016-11-28）github上已经有38000+的star数，称之为最近最受欢迎的深度学习框架一点也不过分。</p>
+<p>本着学习tensorflow和RNN的目的，前些天发现了<a href="https://github.com/karpathy/char-rnn">char-rnn</a>这个有趣的项目，具体就是基于字符预测下一个字符，比日说已知<code>hello</code>的前四个字母<code>hell</code>，那我们就可以据此预测下一个字符很可能是<code>o</code>,因为是字符char级别的，并没有单词或句子层次上的特征提取，相对而言比较简单易学。</p>
+          <div class="read-more">
+            <a href="/2016/11/28/tensorflow-lyrics-generation/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/09/28/Oncoming CV conferences/">DL conferences timeline</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Sep 28, 2016
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        
+          
+        
+
+        
+          <p>Oncoming computer vision top conferences.<br>
+          <div class="read-more">
+            <a href="/2016/09/28/Oncoming CV conferences/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+  </article>
+
+    
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">
+        
+          <a class="post-link" href="/2016/09/03/first/">Here starts my blog</a>
+        
+      </h1>
+
+      <div class="post-meta">
+        <span class="post-time">
+          Sep 3, 2016
+        </span>
+      </div>
+    </header>
+
+    
+
+    <div class="post-content">
+      
+        
+          
+        
+
+        
+          <p>Just a time stamp.<br>
+          <div class="read-more">
+            <a href="/2016/09/03/first/" class="read-more-link">Read more..</a>
+          </div>
+        
+      
+    </div>
+
+    
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    
+    
+  </nav>
+
+
+          </div>
+          
+        </div>  
+      </main>
+
+      <footer id="footer" class="footer">
+  <div class="social-links">
+    
+      
+        
+          <a href="mailto:dileu12@outlook.com" class="iconfont icon-email" title="email"></a>
+        
+      
+    
+      
+    
+      
+    
+      
+    
+      
+        
+          <a href="https://github.com/leido" class="iconfont icon-github" title="github"></a>
+        
+      
+    
+      
+        
+          <a href="http://weibo.com/neon1" class="iconfont icon-weibo" title="weibo"></a>
+        
+      
+    
+      
+    
+    
+    
+  </div>
+
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://hexo.io/">Hexo</a>
+  </span>
+  
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/ahonn/hexo-theme-even">Even</a>
+  </span>
+
+  <span class="copyright-year">
+    
+    &copy; 
+     
+      2015 - 
+    
+    2017
+
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">leido</span>
+  </span>
+</div>
+      </footer>
+
+      <div class="back-to-top" id="back-to-top">
+        <i class="iconfont icon-up"></i>
+      </div>
+    </div>
+
+    
+
+  <script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = '';
+        this.page.identifier = 'index.html';
+        this.page.title = '';
+    };
+    (function() {
+    var d = document, s = d.createElement('script');
+
+    s.src = '//leido.disqus.com/embed.js';
+
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();  
+  </script>
+
+
+    
+  
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/jquery/jquery-3.1.1.min.js"></script>
+  
+
+  
+    <script type="text/javascript" src="/lib/fancybox/jquery.fancybox.pack.js"></script>
+  
+
+    <script type="text/javascript" src="/js/src/even.js?v=2.1.0"></script>
+<script type="text/javascript" src="/js/src/bootstrap.js?v=2.1.0"></script>
+
+  </body>
+</html>
