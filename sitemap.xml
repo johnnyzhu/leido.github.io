@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://leix.me/2017/03/02/normalization-in-deep-learning/</loc>
+    
+    <lastmod>2017-05-02T07:15:37.841Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://leix.me/2017/01/09/tensorflow-practical-guides/</loc>
     
     <lastmod>2017-01-18T13:03:01.653Z</lastmod>
